@@ -240,3 +240,10 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# Oscars rekommendation på vad som ska finnas i ".gitignore" filen.
+bin
+obj
+packages.vs
+*.suo
+*.user
