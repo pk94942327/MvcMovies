@@ -10,21 +10,22 @@ namespace MvcMovie.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(); //Konventionen ger i underförstådd mening i bakgrunden att return View() visar Index.cshtml sidan. Det går fint att skriva return View("Index") också.
         }
 
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
 
-            return View();
+            return View(); //Konventionen ger i underförstådd mening i bakgrunden att return View() visar Abaout.cshtml sidan. Det går fint att skriva return View("Abaout") också.
+            
         }
 
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
 
-            return View();
+            return View(); //Konventionen ger i underförstådd mening i bakgrunden att return View() visar Contact.cshtml sidan. Det går fint att skriva return View("Contact") också.
         }
 
         public IActionResult Error()
