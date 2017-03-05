@@ -9,7 +9,7 @@ using System.Text.Encodings.Web;
 
 namespace MvcMovie.Controllers
 {
-    public class HelloWorldController : Controller
+    public class ExtraController : Controller
     {
         // 
         // GET: /HelloWorld/
@@ -24,7 +24,9 @@ namespace MvcMovie.Controllers
         }
 
         // 
-        // GET: /HelloWorld/Welcome/ 
+        // GET: /Extra/Welcome/ 
+        // GET: /Extra/Welcome?name=Peter => Hello Peter
+        // GET: /Extra/Welcome?name=Peter&numtimes=2 => Hello Peter Hellow Peter
 
         //public string Welcome()
         //{
@@ -34,13 +36,29 @@ namespace MvcMovie.Controllers
         //{
         //    return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is: {numTimes}");
         //}
-        public IActionResult Welcome(string name, int numTimes = 1)
+        public IActionResult Hello(string name, int numTimes = 1)
         {
             ViewData["Message"] = "Hello " + name;
             ViewData["NumTimes"] = numTimes;
 
             return View();
         }
+        /// <summary>
+        /// Konventionen ger i underförstådd mening i bakgrunden att return View() visar Partners.cshtml sidan. 
+        /// Det går fint att skriva return View("Partners") också (enligt samtalet med Oscar).
+        /// </summary>
+        /// <returns>View("Partners")</returns>
+        public IActionResult Partners()
+        {
+            return View();
+        }
 
+        public IActionResult Numbers(int min = 1, int max = 1)
+        {
+            ViewData["Min"] = min;
+            ViewData["Max"] = max;
+
+            return View();
+        }
     }
 }

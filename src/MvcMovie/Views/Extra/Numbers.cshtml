@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Numbers";
+}
+
+<h2>Numbers</h2>
+
+<ul>
+    @for (int i = (int)ViewData["Min"]; i < (int)ViewData["Max"]; i++)
+    {
+       <content>@i,</content>
+    }
+    @ViewData["Max"]
+</ul>

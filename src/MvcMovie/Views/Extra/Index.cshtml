@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    //ViewData["Title"] = "Index";
+    ViewData["Title"] = "Datahantering med XML";
+    
+
+}
+
+    @* Fixade del-uppgifter: *@
+
+<h2>Inlämning 4 MVC</h2><br /><br />
+
+<h4>Fixade uppgifter:</h4>
+<p>
+    - Följ guiden ("Building your first...") så du får en sajt som kan administrera filmer.
+</p>
+<p>
+    - Ändra titeln på sajten till Movie AB (på alla sidor)
+</p>
+<p>
+    - Döp om länk till filmerna till Movies
+</p>
+<p>
+    - Ändra så det går att sätta ett pris på upp till $200 för en film
+</p>
+<p>
+    - Skapa en endpoint (mha Controller) som hälsar: /Extra/Hey?name=Ali => Hello Ali!
+</p>
+<div>
+    <a asp-controller="Extra" asp-action="Hello" asp-route-name="Ali">Hello Ali!</a>
+</div><br />
+<p>
+    - Skapa en länk Partners i huvudmenyn som går till /Extra/Partners
+</p>
+<p>
+    - Skapa en endpoint (mha Controller) som ger tillbaka en html-sida: /Extra/Partners
+</p>
+<p>
+    - Länka till dessa tre endpoint'en från startsidan
+</p>
+<section>
+    <p>
+        - Skapa en endpoint (mha Controller) som ger tillbaka nummer: /Extra/Numbers?from=3&to=5 => 3,4,5
+    </p>
+    <div>
+        <a asp-controller="Extra" asp-action="Numbers" asp-route-min="3" asp-route-max="5">Numbers3To5</a>
+    </div><br />
+</section>
+
+    @* TODO:s left: *@
+
+    <h4>Kvar att göra uppgifter:</h4><br/>
+<h5>Experimentella egna övningar:</h5>
+
+<form asp-controller="Extra" asp-action="Numbers" >
+    <p>
+       <label> Numbers: </label><input type="number" min="1" name="Min" placeholder="Första elementet"><input type="number" max="100" name="Max" placeholder="Sista elementet">
+        <input type="submit" value="GetNumbers" />
+    </p>
+</form>

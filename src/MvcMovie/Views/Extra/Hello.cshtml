@@ -2,14 +2,14 @@
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewData["Title"] = "Welcome";
+    ViewData["Title"] = "Hello";
 }
 
-<h2>Welcome</h2>
+<h2>Hello</h2>
 
 <ul>
     @for (int i = 0; i < (int)ViewData["NumTimes"]; i++)
     {
-        <li>@ViewData["Message"]</li>
+        <li>@ViewData["Message"]!</li>
     }
 </ul>
